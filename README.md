@@ -75,8 +75,8 @@ mvn exec:java -Dexec.mainClass="strukturdata.Main"
 ---
 
 ## Dokumentasi Tambahan
-- [ADR 001 - Pemetaan Stack ke StrukturData](file:///C:/Users/user/IdeaProjects/UTS_Strucdat_kelompok_21/docs/adr/001-stack-mapping.md)
-- [ADR 002 - Strategi Salinan List pada Filter dan Sorting](file:///C:/Users/user/IdeaProjects/UTS_Strucdat_kelompok_21/docs/adr/002-list-cloning-sorting.md)
-- [Trace Pointer Manual Penghapusan Linked List](file:///C:/Users/user/IdeaProjects/UTS_Strucdat_kelompok_21/docs/trace/pointer-trace.md)
-- [Catatan Penggunaan AI (AI_USAGE.md)](file:///C:/Users/user/IdeaProjects/UTS_Strucdat_kelompok_21/AI_USAGE.md)
-- [Daftar Kontribusi Pengerjaan (CONTRIBUTIONS.md)](file:///C:/Users/user/IdeaProjects/UTS_Strucdat_kelompok_21/CONTRIBUTIONS.md)
+- [ADR 001 - Pemetaan Stack ke StrukturData](docs/adr/001-stack-mapping.md)
+- [ADR 002 - Strategi Salinan List pada Filter dan Sorting](docs/adr/002-list-cloning-sorting.md)
+- [Trace Pointer Manual Penghapusan Linked List](docs/trace/pointer-trace.md)
+- [Catatan Penggunaan AI (AI_USAGE.md)](AI_USAGE.md)
+- [Daftar Kontribusi Pengerjaan (CONTRIBUTIONS.md)](CONTRIBUTIONS.md)
