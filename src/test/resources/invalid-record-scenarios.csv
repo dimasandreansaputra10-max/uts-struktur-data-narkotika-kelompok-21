@@ -1,0 +1,7 @@
+testId,caseId,fieldName,value,issue,expectedHandling
+INVALID-001,PUTUSAN-TEST-001,tuntutanBulan,pidana mati,Jenis tuntutan non-numerik dimasukkan ke kolom bulan,Tolak nilai; gunakan tuntutanJenis=pidana_mati dan tuntutanBulan kosong
+INVALID-002,PUTUSAN-TEST-002,dendaRupiah,not_found,Nilai kategorikal dimasukkan ke kolom numerik denda,Tolak nilai; gunakan null untuk tidak ditemukan dan catatan terpisah
+INVALID-003,PUTUSAN-TEST-003,beratBarangBuktiGram,-2.5,Berat barang bukti negatif,Tolak nilai; berat harus >= 0
+INVALID-004,PUTUSAN-TEST-004,tanggalPutusan,31-31-2024,Format tanggal tidak valid,Tolak nilai; gunakan YYYY-MM-DD yang valid
+INVALID-005,PUTUSAN-TEST-005,pasalTerbukti,Pasal 114 ayat (1) [tanpa sumber],Nilai hukum tanpa rujukan halaman sumber,Tandai pending_review; jangan set verified
+INVALID-006,PUTUSAN-TEST-006,tuntutanBulan,0,Nol ambigu antara tidak ada tuntutan dan data tidak ditemukan,Gunakan null + tuntutanJenis=not_found jika tidak tercantum; jangan gunakan 0 sebagai placeholder
