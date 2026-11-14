@@ -1,0 +1,5 @@
+caseId,nomorPerkara,pengadilan,tanggalPutusan,terdakwaKode,jenisNarkotika,beratBarangBuktiGram,pasalDakwaan,pasalTerbukti,tuntutanBulan,vonisBulan,dendaRupiah,barangBukti,keadaanMemberatkan,keadaanMeringankan,sourcePages,bentukDakwaan,tuntutanJenis,dendaCatatan,notes,beratBasis
+INVALID-SHORT-001,TEST/INVALID/001,PN Uji,2024-01-01,TEST-001,Sabu,0.45,Pasal uji,Pasal uji,12,10,0,Data sintetis untuk uji importer,,,uji,TUNGGAL,pidana_penjara_bulan,uji
+INVALID-MISSING-NOMOR,,PN Uji,2024-01-01,TEST-001,Sabu,0.45,Pasal uji,Pasal uji,12,10,0,Data sintetis untuk uji importer,,,uji,TUNGGAL,pidana_penjara_bulan,uji,BARIS UJI — bukan perkara nyata,netto
+INVALID-DUPLICATE-001,TEST/DUP/A,PN Uji,2024-01-01,TEST-001,Sabu,0.45,Pasal uji,Pasal uji,12,10,0,Data sintetis untuk uji importer,,,uji,TUNGGAL,pidana_penjara_bulan,uji,BARIS UJI DUPLIKAT A — bukan perkara nyata,netto
+INVALID-DUPLICATE-001,TEST/DUP/B,PN Uji,2024-01-01,TEST-001,Sabu,0.45,Pasal uji,Pasal uji,12,10,0,Data sintetis untuk uji importer,,,uji,TUNGGAL,pidana_penjara_bulan,uji,BARIS UJI DUPLIKAT B — bukan perkara nyata,netto
