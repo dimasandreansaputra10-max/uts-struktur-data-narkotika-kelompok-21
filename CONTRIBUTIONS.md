@@ -45,4 +45,4 @@ Catatan: checklist menganjurkan satu PR per item. Karena dikerjakan mandiri, beb
 
 ## Penggunaan AI
 
-Sebagian kode dan dokumen dibuat dengan bantuan AI (Antigravity). Seluruh kode dibaca, dijalankan, dan diuji sendiri oleh penulis. Rincian penggunaan AI ada di `AI_USAGE.md`.
+Sebagian kode dan dokumen dibuat dengan bantuan AI (Claude). Seluruh kode dibaca, dijalankan, dan diuji sendiri oleh penulis. Rincian penggunaan AI ada di `AI_USAGE.md`.

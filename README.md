@@ -2,6 +2,7 @@
 
 ## Identitas Mahasiswa
 - **Nama**: Dimas Andrean Saputra
+- **NIM**: 202510370110157
 - **Mata Kuliah**: Struktur Data (Semester Ganjil 2026/2027)
 - **Program Studi / Universitas**: Teknik Informatika, Universitas Muhammadiyah Malang
 - **Kelompok**: 21 (Dikerjakan Mandiri)
@@ -12,7 +13,7 @@
 ## Deskripsi Singkat
 Aplikasi konsol berbasis Java berorientasi objek yang menyimpan, mengelola, menyaring, mengagregasikan, dan menganalisis 50 record putusan perkara tindak pidana narkotika dari **Pengadilan Negeri Jakarta Selatan**.
 
-Aplikasi dibangun murni menggunakan **struktur data generik buatan sendiri** tanpa menggunakan struktur koleksi bawaan `java.util` (seperti `ArrayList`, `LinkedList`, `Stack`, `Queue`, `HashMap`, `HashSet`, `Iterator`, atau `Stream API`).
+Aplikasi dibangun menggunakan **struktur data generik buatan sendiri** tanpa menggunakan struktur koleksi bawaan `java.util` (seperti `ArrayList`, `LinkedList`, `Stack`, `Queue`, `HashMap`, `HashSet`, `Iterator`, atau `Stream API`).
 
 ---
 
@@ -20,7 +21,7 @@ Aplikasi dibangun murni menggunakan **struktur data generik buatan sendiri** tan
 | Peran | Struktur Data | Karakteristik & Penggunaan |
 |:---|:---|:---|
 | **Utama** | `SinglyLinkedList<T>` | Menyimpan 50 objek perkara (`PutusanNarkotika`) secara dinamis dengan pointer `head`, `tail`, `size`, serta penghitung langkah penelusuran (`stepCount`). |
-| **Sekunder** | `Stack<T>` | Menyimpan seluruh riwayat log audit operasi pengguna secara LIFO (Last-In-First-Out) dengan fitur `searchPreserve` dan `restore`. |
+| **Sekunder** | `Stack<T>` | Menyimpan riwayat log audit operasi pengguna secara LIFO (Last-In-First-Out) dengan fitur `searchPreserve` dan `restore`. |
 | **Agregasi** | `JenisCount` | Model pasangan `(nama, jumlah)` untuk menghitung frekuensi distribusi narkotika tanpa memerlukan `HashMap`. |
 
 ### Analisis Kompleksitas Waktu & Pembuktian Langkah
@@ -36,7 +37,7 @@ Aplikasi dibangun murni menggunakan **struktur data generik buatan sendiri** tan
 | `pop()` (Stack) | $O(1)$ | Pengambilan simpul dari `top`. |
 | `peek()` (Stack) | $O(1)$ | Pembacaan simpul di `top`. |
 | `searchPreserve` (Stack) | $O(n)$ | Memeriksa elemen menggunakan stack sementara dan mengembalikan urutan LIFO semula. |
-| `insertionSort` | $O(n^2)$ | Pengurutan vonis mandiri yang dieksekusi pada **salinan list** tanpa merusak list utama. |
+| `insertionSort` | $O(n^2)$ (rata-rata dan terburuk), $O(n)$ (terbaik) | Pengurutan vonis mandiri yang dieksekusi pada **salinan list** tanpa mengubah list utama. |
 
 ---
 
@@ -44,18 +45,16 @@ Aplikasi dibangun murni menggunakan **struktur data generik buatan sendiri** tan
 
 ### Prasyarat
 - Java Development Kit (JDK 17 atau lebih baru)
-- Apache Maven 3.6+
+- Apache Maven 3.6+ (atau Maven bawaan IntelliJ IDEA)
 
 ### 1. Menjalankan Seluruh Unit Test (56 Automated Tests)
 ```bash
-mvn test
+mvn clean test
 ```
+Hasil yang diharapkan: `Tests run: 56, Failures: 0, Errors: 0` dan `BUILD SUCCESS`.
 
-### 2. Mengompilasi dan Menjalankan Aplikasi Konsol Interaktif
-```bash
-mvn compile
-mvn exec:java -Dexec.mainClass="strukturdata.Main"
-```
+### 2. Menjalankan Aplikasi Konsol Interaktif
+Lewat IntelliJ IDEA: buka `src/main/java/strukturdata/Main.java`, lalu klik tombol Run di samping `public static void main`. Jalankan dari folder root project agar berkas `data/putusan.csv` terbaca.
 
 ---
 
@@ -70,13 +69,14 @@ mvn exec:java -Dexec.mainClass="strukturdata.Main"
 8. **Urutkan Perkara Berdasarkan Vonis**: Pengurutan ascending / descending pada salinan list.
 9. **Tampilkan Riwayat Audit**: Menampilkan log seluruh operasi dari stack LIFO (terbaru ke terlama).
 10. **Ekspor Data ke CSV**: Menulis kembali data ke file CSV standar RFC 4180 dengan penanganan kutip dan koma.
-0. **Keluar**: Mengakhiri aplikasi secara bersih.
+- **0. Keluar**: Mengakhiri aplikasi secara bersih.
 
 ---
 
 ## Dokumentasi Tambahan
-- [ADR 001 - Pemetaan Stack ke StrukturData](docs/adr/001-pemilihan-struktur-data.md)
-- [ADR 002 - Strategi Salinan List pada Filter dan Sorting](docs/adr/002-strategi-pencarian-pengurutan.md)
+- [ADR 001 - Pemilihan Struktur Data (Linked List + Stack)](docs/adr/001-pemilihan-struktur-data.md)
+- [ADR 002 - Strategi Pencarian dan Pengurutan](docs/adr/002-strategi-pencarian-pengurutan.md)
 - [Trace Pointer Manual Penghapusan Linked List](docs/trace/pointer-trace.md)
+- [Demo Aplikasi (tangkapan layar)](docs/demo/README.md)
 - [Catatan Penggunaan AI (AI_USAGE.md)](AI_USAGE.md)
 - [Daftar Kontribusi Pengerjaan (CONTRIBUTIONS.md)](CONTRIBUTIONS.md)
