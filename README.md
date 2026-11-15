@@ -2,6 +2,7 @@
 
 ## Identitas Mahasiswa
 - **Nama**: Dimas Andrean Saputra
+- **NIM**: 202510370110157
 - **Mata Kuliah**: Struktur Data (Semester Ganjil 2026/2027)
 - **Program Studi / Universitas**: Teknik Informatika, Universitas Muhammadiyah Malang
 - **Kelompok**: 21 (Dikerjakan Mandiri)
@@ -53,12 +54,6 @@ mvn clean test
 Hasil yang diharapkan: `Tests run: 56, Failures: 0, Errors: 0` dan `BUILD SUCCESS`.
 
 ### 2. Menjalankan Aplikasi Konsol Interaktif
-Lewat Maven:
-```bash
-mvn compile
-mvn exec:java -Dexec.mainClass="strukturdata.Main"
-```
-
 Lewat IntelliJ IDEA: buka `src/main/java/strukturdata/Main.java`, lalu klik tombol Run di samping `public static void main`. Jalankan dari folder root project agar berkas `data/putusan.csv` terbaca.
 
 ---
